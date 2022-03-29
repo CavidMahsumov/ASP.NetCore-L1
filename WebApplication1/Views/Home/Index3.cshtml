@@ -1,0 +1,31 @@
+﻿@model WebApplication1.Models.PersonListViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index3</title>
+</head>
+<body>
+@foreach (var item in Model.Persons)
+{   
+    <p>@item.Id</p>
+    <p>@item.Name</p>
+    <p>@item.Surname</p>
+    <p>@item.CityId</p>
+        <hr>
+}
+
+   <h1>Cities</h1>
+
+    @foreach (var item in Model.Cities)
+    {
+       <h2>@item</h2>
+    }
+</body>
+</html>
